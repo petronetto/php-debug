@@ -2,9 +2,14 @@ version: '2'
 services:
   debug:
     container_name: debug
-    build:
-      context: ./debug
-    image: xdebug-container:latest
+    # If you want build the container localy instead
+    # use my conainter, uncomment the build line
+    # and run: docker-compose build
+    #################################################
+    # build:
+    #   context: ./debug
+    #################################################
+    image: petronetto/php-debug
     environment:
       XDEBUG_HOST: 192.168.25.2 # CHANGE TO YOUR LOCAL IP ADDRESS!!!
     volumes:
