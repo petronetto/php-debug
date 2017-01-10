@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "XDebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9000,
+            // Path to your source on container
+            "serverSourceRoot": "/var/www/html",
+            // Path to your source in your local machine
+            "localSourceRoot": "${workspaceRoot}/src"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+version: '2'
+services:
+  debug:
+    container_name: debug
+    build:
+      context: ./debug
+    image: xdebug-container:latest
+    environment:
+      XDEBUG_HOST: 192.168.25.2 # CHANGE TO YOUR LOCAL IP ADDRESS!!!
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8888:80"
+volumes:
+  data:
+    driver: "local"

@@ -21,7 +21,6 @@ RUN apk --update add \
         nginx \
         curl \
         vim \
-        supervisor \
 
     # Cleanup
     && rm -rf /var/cache/apk/*
@@ -32,19 +31,12 @@ RUN ln -s /usr/bin/php7 /usr/bin/php
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 
-# Configure Nginx
-COPY config/nginx/nginx.conf /etc/nginx/nginx.conf
-COPY config/nginx/default /etc/nginx/sites-enabled/default
-
-# Configure PHP-FPM
-COPY config/php/php.ini /etc/php7/conf.d/zzz_custom.ini
-COPY config/php/www.conf /etc/php/7.0/fpm/pool.d/www.conf
-
-# Configure supervisord
-COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
 # Configure XDebug
-COPY config/xdebug.ini /etc/php7/conf.d/xdebug.ini
+COPY xdebug.ini /etc/php7/conf.d/xdebug.ini
+
+# Configure the container bootstrap
+COPY start-container /usr/local/bin/start-container
+RUN chmod +x usr/local/bin/start-container
 
 EXPOSE 80
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["start-container"]
