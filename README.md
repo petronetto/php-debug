@@ -43,8 +43,9 @@ To debug in VS Code, just put this config in your lauch.json:
 ### PHPStorn
 Configuration is in two parts:
 
-Configuring a Server: `Preferences > Server`
-Configuring a new PHP Remote Debugger: `Run > Edit Configurations` click in `+` and `PHP Remote Debugger`
+Configuring a Server: `Preferences > Server`.
+
+Configuring a new PHP Remote Debugger: `Run > Edit Configurations` click in `+` and `PHP Remote Debugger`.
 
 ![](http://imageshack.com/a/img923/2384/K56AWW.png)
 
