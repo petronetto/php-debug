@@ -14,7 +14,7 @@ Run:
 docker-compose up -d
 ```
 
-Optionaly you can build the container insteade use my build image, simply uncomment the `build` line in `docker-compose.yml` and run `docker-compose build`.
+Optionaly you can build the container instead use my image, simply uncomment the `build` line in `docker-compose.yml` and run `docker-compose build`.
 
 ## IDE/Editor configuration
 
@@ -22,6 +22,7 @@ You need configure your editor/IDE to map the local source and where is the remo
 
 ### VS Code
 To debug in VS Code, just put this config in your lauch.json:
+**NOTE** this example will map the folder `src` in your local machine to `/var/www/html` onde debug container. Remeber that container is configured to boostrap in `/var/www/html/public`, as the example provided in this repo.
 ```json
 {
     "version": "0.2.0",
