@@ -22,22 +22,6 @@ RUN apk --update add \
         vim \
 
     # Cleanup
-    apk del --purge \
-        *-dev \
-        build-base \
-        autoconf \
-        libtool \
-        && \
-
-    rm -rf \
-        /usr/include/php7 \
-        /usr/lib/php7/build \
-        /usr/lib/php7/modules/*.a \
-        /var/cache/apk/* \
-        /usr/share/man \
-        /tmp/* \
-        /root/.composer
-
     && rm -rf /var/cache/apk/*
 
 # Creating symbolic link to php
