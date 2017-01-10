@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-sed -i "s/xdebug\.remote_host\=.*/xdebug\.remote_host\=$XDEBUG_HOST/g" /etc/php7/conf.d/xdebug.ini
-
-php -S 0.0.0.0:80 -t /var/www/html/public
