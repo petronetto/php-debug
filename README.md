@@ -21,7 +21,7 @@ Optionaly you can build the container instead use my image, simply uncomment the
 You need configure your editor/IDE to map the local source and where is the remote source.
 
 ### VS Code
-To debug in VS Code, just put this config in your lauch.json:
+To debug in VS Code, first, you need install [PHP Debug Extension](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug), after that just put this config in your lauch.json:
 **NOTE** this example will map the folder `src` in your local machine to `/var/www/html` onde debug container. Remeber that container is configured to boostrap in `/var/www/html/public`, as the example provided in this repo.
 ```json
 {
