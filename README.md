@@ -44,16 +44,46 @@ To debug in VS Code, first, you need install [PHP Debug Extension](https://marke
 ### PHPStorn
 Configuration is in two parts:
 
-#### 1:
 Configuring a Server: `Preferences > Languages & Frameworks > PHP > Servers`
 
 ![](http://imagizer.imageshack.us/v2/1024x768q90/924/1ftWIS.png)
 
 
 
-#### 2:
 Configuring a new PHP Remote Debugger: `Run > Edit Configurations` click in `+` and `PHP Remote Debugger`
 ![](http://imagizer.imageshack.us/v2/1024x768q90/922/bnd7fq.png)
+
+
+## Sublime Text
+
+Install [XDebug Client](https://github.com/martomo/SublimeTextXdebug)
+
+Create a sublime-project in `Project > Save Project As...`
+
+Below a sample config:
+
+```json
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	],
+	"settings":
+    {
+        "xdebug": {
+        	"url": "http://localhost:8888",
+            "path_mapping": {
+                "/var/www/html" : "/full/path/to/your/source"
+            }
+        }
+    }
+}
+```
+
+
 
 
 Enjoy!
