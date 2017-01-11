@@ -21,8 +21,12 @@ Optionaly you can build the container instead use my image, simply uncomment the
 You need configure your editor/IDE to map the local source and where is the remote source.
 
 ### VS Code
-To debug in VS Code, first, you need install [PHP Debug Extension](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug), after that just put this config in your lauch.json:
-**NOTE** this example will map the folder `src` in your local machine to `/var/www/html` onde debug container. Remeber that container is configured to boostrap in `/var/www/html/public`, as the example provided in this repo.
+Install [PHP Debug Extension](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug).
+
+Put this config in your lauch.json:
+
+>**NOTE** this example will map the folder `src` in your local machine to `/var/www/html` onde debug container. Remeber that container is configured to boostrap in `/var/www/html/public`, as the example provided in this repo.
+
 ```json
 {
     "version": "0.2.0",
@@ -60,26 +64,24 @@ Install [XDebug Client](https://github.com/martomo/SublimeTextXdebug)
 
 Create a sublime-project in `Project > Save Project As...`
 
-Below a sample config:
+Paste the config as bellow in created file, and ensure that `path_mapping` is mapping the **full** path to your source, eg: `C:\my\source`, `/Users/user/my/source`, `/home/user/source`, etc...:
 
 ```json
 {
-	"folders":
-	[
-		{
-			"follow_symlinks": true,
-			"path": "."
-		}
-	],
-	"settings":
+  "folders": [
     {
-        "xdebug": {
-        	"url": "http://localhost:8888",
-            "path_mapping": {
-                "/var/www/html" : "/full/path/to/your/source"
-            }
-        }
+      "follow_symlinks": true,
+      "path": "."
     }
+  ],
+  "settings": {
+    "xdebug": {
+      "url": "http://localhost:8888",
+      "path_mapping": {
+        "/var/www/html" : "/full/path/to/your/source"
+      }
+    }
+  }
 }
 ```
 
