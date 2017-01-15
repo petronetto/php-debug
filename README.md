@@ -76,7 +76,7 @@ Paste the config as bellow in created file, and ensure that `path_mapping` is ma
 
 ## Atom
 
-Intall [this extension](https://github.com/gwomacks/php-debug) and put in your `config.cson`:
+Intall [this extension](https://github.com/gwomacks/php-debug), go to `Settings > Open Config Folder` and put in your `config.cson`:
 
 ```
 "php-debug":
@@ -87,7 +87,7 @@ Intall [this extension](https://github.com/gwomacks/php-debug) and put in your `
 ```
 
 
-### PHPStorn
+## PHPStorn
 Configuration is in two parts:
 
 Configuring a Server: `Preferences > Languages & Frameworks > PHP > Servers`
