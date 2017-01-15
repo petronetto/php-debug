@@ -45,18 +45,6 @@ Put this config in your lauch.json:
 }
 ```
 
-### PHPStorn
-Configuration is in two parts:
-
-Configuring a Server: `Preferences > Languages & Frameworks > PHP > Servers`
-
-![](http://imagizer.imageshack.us/v2/1024x768q90/924/1ftWIS.png)
-
-
-
-Configuring a new PHP Remote Debugger: `Run > Edit Configurations` click in `+` and `PHP Remote Debugger`
-![](http://imagizer.imageshack.us/v2/1024x768q90/922/bnd7fq.png)
-
 
 ## Sublime Text
 
@@ -86,6 +74,29 @@ Paste the config as bellow in created file, and ensure that `path_mapping` is ma
 ```
 
 
+## Atom
 
+Intall [this extension](https://github.com/gwomacks/php-debug) and put in your `config.cson`:
+
+```
+"php-debug":
+    PathMaps: [
+      "remotepath;localpath"
+      "/var/www/html;/path/to/your/local/source"
+    ]
+```
+
+
+### PHPStorn
+Configuration is in two parts:
+
+Configuring a Server: `Preferences > Languages & Frameworks > PHP > Servers`
+
+![](http://imagizer.imageshack.us/v2/1024x768q90/924/1ftWIS.png)
+
+
+
+Configuring a new PHP Remote Debugger: `Run > Edit Configurations` click in `+` and `PHP Remote Debugger`
+![](http://imagizer.imageshack.us/v2/1024x768q90/922/bnd7fq.png)
 
 Enjoy!
