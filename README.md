@@ -23,7 +23,7 @@ You need configure your editor/IDE to map the local source and where is the remo
 ### VS Code
 Install [PHP Debug Extension](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug).
 
-Put this config in your lauch.json:
+Put this config in your `launch.json`:
 
 >**NOTE** this example will map the folder `src` in your local machine to `/var/www/html` onde debug container. Remeber that container is configured to boostrap in `/var/www/html/public`, as the example provided in this repo.
 
