@@ -1,3 +1,5 @@
+# [DEPRECATED]
+Use https://github.com/petronetto/php7-alpine instead
 
 # PHP Debug container
 ## Running the Debug container
